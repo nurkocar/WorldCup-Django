@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Welcome to world cup app!</h1>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit"> Add Player </button>
+    </form>
+    <div>
+        <h3>Players List</h3>
+        <ul>
+            {% for player in players %}
+                <li>{{ player.player_name }}, plays in {{ player.player_team.country_name }} (age: {{ player.age }})</li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock content %}
