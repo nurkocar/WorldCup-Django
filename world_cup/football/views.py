@@ -33,7 +33,7 @@ class CountryView(generics.ListAPIView):
    serializer_class = CountrySerializer
 
 
-# Just leaving for future reference
+# Just leaving for future reference. I create countries view without rest framework first, so leaving it here as you may want to see it:)
 # def countries(request):
 #     countries = Country.objects.all()
     
@@ -45,4 +45,3 @@ class CountryView(generics.ListAPIView):
 #     data = serialize("json", countries, fields=('country_name', 'fifa_ranking', 'average_age'))
     
 #     return HttpResponse(data, content_type="application/json")
-
